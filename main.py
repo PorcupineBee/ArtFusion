@@ -314,7 +314,7 @@ if __name__ == "__main__":
     print("\n1. BASIC IMPROVED TRANSFER")
     print("-"*70)
     
-    nst = ImprovedStyleTransfer(model_type='vgg19', block_idx=block_idx)
+    nst = ImprovedStyleTransfer(model_type='efficientnet', block_idx=block_idx)
     
     result = nst.transfer(
         content_path=content_image_pth,
