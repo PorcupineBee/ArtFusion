@@ -1,5 +1,6 @@
 # requirements: make conda env with environment_py37.yml
-#  python version 3.7.16 cuDNN : ~8.2 ; wsl; 
+#  python version 3.7.16 cuDNN : ~8.2 ; wsl; LD_LIBRARY_PATH # /usr/local/cuda-11.3/lib64:/usr/local/cuda/lib64:/usr/local/cuda-11.3/lib64:/usr/local/cuda/lib64:
+#%%
 import time
 import os
 import torch
@@ -124,7 +125,7 @@ def postpropcess(tensor):
     return img
 
 # endregion
-
+#%%
 # region Low-resolution pass
 
 vgg = VGG(pool="max").to(device)
